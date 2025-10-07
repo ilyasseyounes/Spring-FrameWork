@@ -11,8 +11,6 @@
 
 **A production-ready microservices architecture built with Spring Boot, demonstrating modern cloud-native patterns and best practices**
 
-[📺 YouTube Tutorial](https://youtube.com) • [💬 Discord Community](https://discord.com) • [🐛 Report Bug](https://github.com/chrisblakely01/java-spring-microservices/issues)
-
 </div>
 
 ---
@@ -51,31 +49,31 @@ This codebase is part of a comprehensive YouTube tutorial series on building pro
 
 ```mermaid
 graph TB
-    subgraph "Client Layer"
-        Client[🌐 Client Applications]
+    subgraph ClientLayer["Client Layer"]
+        Client["🌐 Client Applications"]
     end
     
-    subgraph "API Gateway Layer"
-        Gateway[🚪 API Gateway<br/>Spring Cloud Gateway]
+    subgraph GatewayLayer["API Gateway Layer"]
+        Gateway["🚪 API Gateway"]
     end
     
-    subgraph "Authentication"
-        Auth[🔐 Auth Service<br/>JWT + Spring Security]
-        AuthDB[(🗄️ Auth DB<br/>PostgreSQL)]
+    subgraph AuthLayer["Authentication"]
+        Auth["🔐 Auth Service"]
+        AuthDB[("Auth DB")]
     end
     
-    subgraph "Core Services"
-        Patient[👥 Patient Service<br/>REST API]
-        Billing[💰 Billing Service<br/>gRPC Server]
-        PatientDB[(🗄️ Patient DB<br/>PostgreSQL)]
+    subgraph CoreServices["Core Services"]
+        Patient["👥 Patient Service"]
+        Billing["💰 Billing Service"]
+        PatientDB[("Patient DB")]
     end
     
-    subgraph "Message Broker"
-        Kafka[📨 Apache Kafka<br/>Event Streaming]
+    subgraph MessageBroker["Message Broker"]
+        Kafka["📨 Apache Kafka"]
     end
     
-    subgraph "Service Discovery"
-        Eureka[🔍 Eureka Server<br/>Service Registry]
+    subgraph ServiceDiscovery["Service Discovery"]
+        Eureka["🔍 Eureka Server"]
     end
     
     Client --> Gateway
@@ -94,13 +92,15 @@ graph TB
     Billing -.Register.-> Eureka
     Gateway -.Discover.-> Eureka
     
-    style Client fill:#e1f5ff
-    style Gateway fill:#fff4e1
-    style Auth fill:#ffe1e1
-    style Patient fill:#e1ffe1
-    style Billing fill:#f0e1ff
-    style Kafka fill:#ffe1f0
-    style Eureka fill:#e1e1ff
+    style Client fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    style Gateway fill:#F5A623,stroke:#C17D11,stroke-width:2px,color:#000
+    style Auth fill:#E74C3C,stroke:#A93226,stroke-width:2px,color:#fff
+    style Patient fill:#2ECC71,stroke:#229954,stroke-width:2px,color:#fff
+    style Billing fill:#9B59B6,stroke:#6C3483,stroke-width:2px,color:#fff
+    style Kafka fill:#E91E63,stroke:#AD1457,stroke-width:2px,color:#fff
+    style Eureka fill:#3498DB,stroke:#21618C,stroke-width:2px,color:#fff
+    style AuthDB fill:#34495E,stroke:#1C2833,stroke-width:2px,color:#fff
+    style PatientDB fill:#34495E,stroke:#1C2833,stroke-width:2px,color:#fff
 ```
 
 ### Communication Patterns
@@ -710,23 +710,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🙏 Acknowledgments
-
-- Spring Boot Team for the excellent framework
-- Apache Kafka for event streaming capabilities
-- gRPC Team for efficient RPC framework
-- The open-source community
-
----
-
-## 📞 Support
-
-- 📺 **YouTube:** [Tutorial Series](https://youtube.com)
-- 💬 **Discord:** [Join Community](https://discord.com)
-- 🐛 **Issues:** [GitHub Issues](https://github.com/chrisblakely01/java-spring-microservices/issues)
-- 📧 **Email:** support@example.com
-
----
 
 ## 🗺️ Roadmap
 
@@ -745,9 +728,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**⭐ Star this repository if you find it helpful!**
-
-Made with ❤️ by Chris Blakely
 
 [⬆ Back to Top](#-java-spring-microservices-architecture)
 
